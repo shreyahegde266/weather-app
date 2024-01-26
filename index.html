@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WeatherNow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/170b2fd3fe.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Loader -->
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </head>
+
+  <body>
+
+      <!-- body -->
+      <header>
+         <!-- Video Background -->
+    <header>
+      <video autoplay loop muted playsinline id="video-bg">
+          <source src="cloud_-_48501 (Original).mp4" type="video/mp4">
+          <!-- Add additional source elements for different video formats if needed -->
+          Your browser does not support the video tag.
+      </video>
+  </header>
+        <div class="homepage">
+          <span class="landing-text">WeatherNow</span> <br />
+          <span class="landing-text-2"
+            >Where Is The Sun? Is It Above Or Below The Clouds?</span
+          >
+        </div>
+      </header>
+      <div class="container">
+        <div class="form">
+          <!-- DropDown Menu -->
+          <div class="dropdown">
+            <button name="line" class="dropbtn">Location</button>
+            <div class="dropdown-content">
+            </div>
+          </div>
+          <!-- End -->
+          <input id="input" type="text" placeholder="Enter a city name" />
+          <button id="button" class="button" onclick="getWeather()">GO</button>
+        </div>
+        <div class="result-container" style="display: none">
+          <div id="loader" class="loader"></div>
+          <div id="result" class="result-box" style="display: none"></div>
+        </div>
+        <canvas id="hourlyChart" width="400" height="200"></canvas>
+      </div>
+
+    <!-- scripts -->
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
+
